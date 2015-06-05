@@ -3,18 +3,21 @@ body {
 	color: white;
     text-align: center;
     font-family: 'American Typewriter';
-}
-
-h1 {
     font-weight: 200;
 }
 
+h1 {
+    font-weight: inherit;
+}
+
 footer {
-	font-weight: 200;
+	font-weight: inherit;
 }
 
 p {
-	font-weight: 200;
+	font-weight: inherit;
+	margin-left: 100;
+	margin-right: 100; 
 }
 
 .gingerBreadMan {
