@@ -1,0 +1,124 @@
+<html>
+<script src="https://unpkg.com/vue"></script>
+
+  <link rel = "stylesheet"
+   type = "text/css"
+   href = "btn.css" />
+ </head>
+
+ <link rel = "stylesheet"
+   type = "text/css"
+   href = "style.css" />
+ </head>
+
+ <script src="https://use.fontawesome.com/4f8f2bfe65.js"></script>
+
+
+<head>
+<title>Draft Buddy</title>
+</head>
+
+<body>
+<div id="team-hero-options">
+
+	<div class="center">
+		<fieldset>
+			<legend>Your Team</legend>
+			<table class="right">
+				<tr>
+					<td>
+						<button v-on:click="toggleEditTeamAllowed"
+							class="btn btn-default fa right"
+							v-bind:class=" {'fa-lock': !edit_team_allowed, 'fa-unlock-alt': edit_team_allowed} "></button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<button v-on:click="saveTeam"
+							class="btn btn-default fa right fa-floppy-o save-button"></button>
+					</td>
+				</tr>
+			</table>
+				
+			<table class="center fixed_table">
+				<tbody class="left fixed_table">
+					<tr is="player-hero-options"
+						v-for="(playerName, index) in selectedPlayerNames"
+						v-bind:selected_player_names="selectedPlayerNames"
+						v-bind:player_names="playerNames"
+						v-bind:player_name_prop="playerName"
+						v-bind:player_to_hero_position_pairs="playerToHeroPositionPairs"
+						v-bind:player_index="index"
+						v-bind:edit_team_allowed_prop="edit_team_allowed"
+						v-bind:selected_heroes_prop="selected_heroes"
+						v-on:add_new_hero_and_position="addNewHeroAndPositionForPlayer"
+						v-on:remove_hero_and_position_for_player="removeHeroAndPositionForPlayer"
+						v-on:selected_player_changed="selectedPlayerChanged"
+						v-on:select_hero="selectHero"
+						v-on:add_new_player="addNewPlayer"
+						class="team_column">
+					</tr>
+				</tbody>
+			</table>
+		</fieldset>
+	</div>
+	<br/>
+
+	<div class="center">
+		<fieldset>
+			<legend>Your Draft</legend>
+			<picks-and-bans v-bind:picks_prop="topPicks"
+				v-bind:bans_prop="topBans"
+				v-bind:top_or_bottom_prop="'top'"
+				v-bind:selected_heroes_prop="selected_heroes"
+				v-bind:chosen_heroes_prop="allPicksAndBans"
+				v-on:select_hero="selectHero"
+				v-on:hero_chosen="heroChosen">
+			</picks-and-bans>
+		</fieldset>
+	</div>
+
+	<br/>
+	<div class="center">
+		<fieldset>
+			<legend>Enemy Draft</legend>
+			<picks-and-bans v-bind:picks_prop="bottomPicks"
+				v-bind:bans_prop="bottomBans"
+				v-bind:top_or_bottom_prop="'bottom'"
+				v-bind:selected_heroes_prop="selected_heroes"
+				v-bind:chosen_heroes_prop="allPicksAndBans"
+				v-on:select_hero="selectHero"
+				v-on:hero_chosen="heroChosen">
+			</picks-and-bans>
+		</fieldset>
+	</div>
+	<br/>
+	<available-hero-table v-bind:hero_rows_prop="hero_matrix" 
+		v-bind:selected_heroes_prop="selected_heroes"
+		v-on:select_hero="selectHero">
+	</available-hero-table>
+
+	<div class="legend center">
+		<div class="counterTo legend-item"> Good Against </div>
+		<div class="counteredBy legend-item"> Bad Against </div>
+		<div class="synergizesWith legend-item"> Synergizes With </div>
+	</div>
+
+	<br/>
+
+	<div class="center">
+		<button class="btn btn-default center" v-on:click="goToCounterEditPage">Edit Counters</button>
+	</div>
+
+</div>
+</body>
+
+<script src='heroes.json'></script>
+<script src='counter_dict.json'></script>
+<script src='hero_input.js'></script>
+<script src='vue-select.js'></script>
+<script src='mainPage.js'></script>
+
+
+
+</html>

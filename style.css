@@ -1,0 +1,181 @@
+.unselected_pick_or_ban {
+	border-color: rgba(60,60,60,.26);
+	color: #333;
+}
+
+.counterTo {
+	border-style: solid;
+	border-color: green;
+	color: green;
+}
+
+.counteredBy {
+	border-style: solid;
+	border-color: red;
+	color: red;
+}
+
+.synergizesWith {
+	border-style: solid;
+	border-color: blue;
+	color: blue;
+}
+
+.unimportant {
+	opacity: 0.4;
+	filter: alpha(opacity=40);
+	zoom: 1;
+}
+
+.redshadow {
+	box-shadow:0px 0px 2px 4px red;
+}
+
+.center {
+    text-align: center;
+    margin-left:auto; 
+    margin-right:auto;
+}
+
+.left {
+	text-align: left;
+}
+
+.team_column {
+	vertical-align: top;
+	padding: 5px;
+	width: 250px;
+}
+
+.hidden {
+	display: none;
+}
+
+.no_bullets {
+	list-style: none;
+}
+
+.hero_list {
+	margin-left: 0px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-left: 0px;
+}
+
+.available_hero {
+	border-radius: 5px;
+	border: 2px solid;
+	-moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+   cursor:pointer;
+   font-family: Arial;
+   font-size: 14px;
+}
+
+.available_hero_img {
+	border: 4px solid;
+}
+
+.cell_padding {
+	margin: 2px;
+	padding: 1px;
+}
+
+.hero_position {
+	margin: 2px;
+	border-radius: 5px;
+	border: 2px solid;
+	overflow: hidden;
+	-moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+   cursor:pointer;
+}
+
+.hero_position_neutral {
+	color: grey;
+	border-color: grey;
+}
+
+.selected_hero {
+	color: black;
+	border-color: black;
+}
+
+
+.selected_pick_or_ban {
+	color: black;
+	border-color: black;
+	border-style: solid;
+}
+
+.pick_or_ban {
+	cursor: pointer;
+}
+
+.hero_position_synergy {
+	border: 2px solid green;
+	color: green;
+}
+
+fieldset {
+   display: inline-block;
+   margin: auto;
+   text-align: left;
+}
+
+legend {
+	font-family: Arial;
+}
+
+.right {
+	float: right;
+}
+.left {
+	float: left;
+}
+
+.fixed_table {
+	table-layout: fixed;
+}
+
+.btn-pos {
+	padding: 2px 2px;
+	height: 36px;
+}
+
+.fixed_size_div {
+	width: 180px;
+}
+
+.auto_margins {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.selected-tag {
+	cursor: pointer;
+}
+
+.legend {
+	
+}
+
+.legend-item {
+	display: inline;
+	margin: 3px;
+}
+
+.save-button {
+	padding-left: 9px;
+	padding-right: 9px;
+}
+
+.text-arial {
+	font-family: Arial;
+}
