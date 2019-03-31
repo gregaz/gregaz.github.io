@@ -215,7 +215,7 @@ backButton.textContent = 'Back';
 backButton.id = 'backButton';
 backButton.classList.add('btn-default');
 backButton.classList.add('btn');
-backButton.onclick = () => {location.href = location.href.replace("countersEditPage.html","") + 'mainPage.html';};
+backButton.onclick = () => {location.href = location.href.replace("countersEditPage.html","") + 'index.html';};
 
 var resetCountersButton = document.createElement('button');
 resetCountersButton.textContent = 'Reset to Defaults';
