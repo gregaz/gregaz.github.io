@@ -170,7 +170,9 @@ Vue.component('player-hero-options', {
 		     <option value="3">3</option>\
 		     <option value="4">4</option>\
 		     <option value="5">5</option>\
-		  </select>\
+			</select>\
+			</td>\
+			<td>\
 		  <button v-on:click="addNewHeroAndPosition" v-bind:class="{ hidden: shouldHideAddHeroButton }" class="btn btn-xs btn-success">&#10133;</button>\
 		  <button v-on:click="addNewPlayer" v-bind:class="{ hidden: shouldHideAddPlayerButton }" class="btn btn-xs btn-success">&#10133;</button>\
 		 </td>\
@@ -765,7 +767,7 @@ var vm = new Vue({
 			localStorage.default_selected_players = JSON.stringify(default_selected_players);
   	},
   	goToCounterEditPage: function() {
-  		location.href = location.href.replace("mainPage.html","") + 'countersEditPage.html';
+  		location.href = location.href.replace("index.html","") + 'countersEditPage.html';
   	},
   	heroChosen: function(hero_pick_ban_index) {
   		if(hero_pick_ban_index == 'pick') {

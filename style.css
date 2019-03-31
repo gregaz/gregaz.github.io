@@ -162,10 +162,6 @@ legend {
 	cursor: pointer;
 }
 
-.legend {
-	
-}
-
 .legend-item {
 	display: inline;
 	margin: 3px;
@@ -177,5 +173,9 @@ legend {
 }
 
 .text-arial {
+	font-family: Arial;
+}
+
+.feedback {
 	font-family: Arial;
 }
